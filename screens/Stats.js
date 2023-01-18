@@ -1,21 +1,19 @@
-import React, { useState, useEffect } from 'react';
-import { ScreenWidth } from '../components/constants';
-import { collection, onSnapshot, query, where, getDoc, getDocs, addDoc } from 'firebase/firestore';
+import React, { useState } from 'react';
+import { collection, query, where, getDocs } from 'firebase/firestore';
 import { getUserID } from '../utils/authentication';
 import { db } from '../utils/db';
 import { StatusBarHeight } from '../components/constants';
 import { colors } from '../components/colors';
 import { StatusBar } from 'expo-status-bar';
-import { View, Text, TouchableOpacity, Platform, TextInput, ScrollView, Pressable, Keyboard, StyleSheet, FlatList, Alert} from 'react-native';
-import { Entypo, Foundation } from '@expo/vector-icons'
+import { View, Text, TouchableOpacity, ScrollView, Pressable, Keyboard, StyleSheet } from 'react-native';
+import { Entypo } from '@expo/vector-icons'
 import moment from 'moment';
-import { BarChart, LineChart, PieChart } from "react-native-gifted-charts";
-import { Octicons, FontAwesome, Feather, MaterialCommunityIcons } from '@expo/vector-icons'
-import { current } from '@reduxjs/toolkit';
+import { PieChart } from "react-native-gifted-charts";
+import { Feather, MaterialCommunityIcons } from '@expo/vector-icons'
 import { useFocusEffect } from '@react-navigation/native';
 import CurrencyFormat from 'react-currency-format';
 
-const {lightYellow, lighterBlue, beige, brown, darkBlue, lightBlue, darkYellow} = colors;
+const { lighterBlue, beige, darkBlue, lightBlue } = colors;
 
 const Stats = (props) => {
   const [income, setIncome] = useState({})
@@ -429,17 +427,6 @@ const Stats = (props) => {
 }
 
 export default Stats;
-
-const chartConfig = {
-  backgroundGradientFrom: "#1E2923",
-  backgroundGradientFromOpacity: 0,
-  backgroundGradientTo: "#08130D",
-  backgroundGradientToOpacity: 0.5,
-  color: (opacity = 1) => `rgba(26, 255, 146, ${opacity})`,
-  strokeWidth: 3, // optional, default 3
-  barPercentage: 0.5,
-  useShadowColorFromDataset: false // optional
-};
 
 const styles = StyleSheet.create({
   container:{

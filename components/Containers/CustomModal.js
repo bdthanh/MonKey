@@ -1,13 +1,8 @@
-import React, {useState} from 'react';
-import { View, Text, StyleSheet, Pressable, FlatList, TouchableOpacity, Animated, ScrollView, Alert, Modal } from 'react-native';
-import { SwipeListView } from 'react-native-swipe-list-view';
+import React from 'react';
+import { View, Text, StyleSheet, TouchableOpacity} from 'react-native';
 import { colors } from '../colors';
 import { StatusBarHeight } from '../constants';
-import { Feather, Octicons, MaterialCommunityIcons } from '@expo/vector-icons';
-import { Snackbar } from 'react-native-paper';
-import IconList from '../../CategoriesList/IconList';
-import ColorList from '../../CategoriesList/ColorList';
-const { lightYellow, beige, lightBlue, darkBlue, darkYellow } = colors
+const { darkBlue, darkYellow } = colors
 
 const CustomModal = (props) => {
   return (

@@ -1,4 +1,4 @@
-import React, {useState, useMemo} from 'react';
+import React, {useState} from 'react';
 import { View, Text, StyleSheet, TextInput, FlatList, TouchableOpacity, Animated, Keyboard, Alert, Modal, Pressable } from 'react-native';
 import { SwipeListView } from 'react-native-swipe-list-view';
 import { colors } from '../components/colors';
@@ -14,7 +14,7 @@ import { query, where, onSnapshot, collection, orderBy, deleteDoc, doc, updateDo
 import { db } from '../utils/db';
 import { useFocusEffect } from '@react-navigation/native';
 import { StatusBar } from 'expo-status-bar';
-const { lightYellow, beige, lightBlue, darkBlue, darkYellow } = colors
+const { lightYellow, lightBlue, darkBlue, darkYellow } = colors
 
 const ListOfIncomeCategory = ({navigation}) => {
   /*************** Modifying category ***************/

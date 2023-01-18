@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState} from 'react'
 import MainContainer from '../components/Containers/Main';
 import KeyboardAvoidingContainer from '../components/Containers/KeyboardAvoiding';
 import { Text, View, Alert } from 'react-native';
@@ -7,8 +7,6 @@ import TextInputWithIcon from '../components/Containers/TextInputWithIcon';
 import SignUpButton from '../components/Containers/SignUpButton';
 import PressableText from '../components/Containers/PressableText';
 import { handleSignup } from '../utils/authentication';
-import { StatusBar } from 'expo-status-bar';
-import Login from './Login';
 
 const SignUp = ({navigation}) => {
   const [username, setUsername] = useState('');

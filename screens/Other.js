@@ -1,5 +1,5 @@
-import React, {useEffect, useState, useCallback} from 'react';
-import { View, Text, StyleSheet, ScrollView, TouchableOpacity, Linking, Platform, Alert } from 'react-native';
+import React, {useState} from 'react';
+import { View, Text, StyleSheet, ScrollView, TouchableOpacity, Linking, Alert } from 'react-native';
 import { getUserID, handleSignOut } from '../utils/authentication';
 import { StatusBarHeight } from '../components/constants';
 import * as ImagePicker from 'expo-image-picker';
@@ -10,10 +10,10 @@ import SectionContainer from '../components/Containers/SectionContainer';
 import { StatusBar } from 'expo-status-bar';
 import moment from 'moment';
 
-import { addDoc, collection, doc, onSnapshot, updateDoc, getDoc } from 'firebase/firestore';
+import { doc, onSnapshot, updateDoc, getDoc } from 'firebase/firestore';
 import { db } from '../utils/db';
 import { useFocusEffect } from '@react-navigation/native';
-const {beige, lighterBlue, brown, darkBlue, lightBlue, darkYellow, lightYellow} = colors;
+const {lighterBlue, darkBlue, darkYellow} = colors;
 
 const Other = ({navigation}) => {
   const [image, setImage] = useState('');

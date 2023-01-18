@@ -1,9 +1,9 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import { View, Text, TouchableOpacity,  Modal, TextInput, Alert, Pressable, Keyboard, StyleSheet, FlatList} from 'react-native';
 import { colors } from '../components/colors';
 import moment from 'moment';
 import DateTimePicker from '@react-native-community/datetimepicker';
-import { collection, onSnapshot, deleteDoc, doc, getDoc, setDoc, updateDoc, getDocs, query } from 'firebase/firestore';
+import { collection, doc, updateDoc, getDocs, query } from 'firebase/firestore';
 import { db } from '../utils/db';
 import { ScreenWidth } from '../components/constants';
 import { getUserID } from '../utils/authentication'; 

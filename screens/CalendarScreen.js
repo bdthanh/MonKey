@@ -2,19 +2,18 @@ import React, {useState, useEffect, useMemo} from 'react';
 import { View, Text, TouchableOpacity, Alert, Animated, StyleSheet } from 'react-native';
 import { db } from '../utils/db';
 import CurrencyFormat from 'react-currency-format';
-import { collection, onSnapshot, query, where, orderBy, deleteDoc, doc, setDoc, getDocs } from 'firebase/firestore';
-import { authentication, getUserID } from '../utils/authentication';
+import { collection, onSnapshot, query, where, deleteDoc, doc } from 'firebase/firestore';
+import { getUserID } from '../utils/authentication';
 import { Calendar } from 'react-native-calendars';
 import { ScreenHeight } from '../components/constants';
 import { StatusBarHeight } from '../components/constants';
 import moment from 'moment';
 import { colors } from '../components/colors';
 import { SwipeListView } from 'react-native-swipe-list-view';
-import { Octicons, FontAwesome, Feather, MaterialCommunityIcons, Entypo, Foundation } from '@expo/vector-icons'
+import { Octicons, Feather, MaterialCommunityIcons } from '@expo/vector-icons'
 import { StatusBar } from 'expo-status-bar';
-import { Timestamp } from 'firebase/firestore';
 import { useFocusEffect } from '@react-navigation/native';
-const {beige, brown, darkBlue, lightBlue, darkYellow,lighterBlue} = colors;
+const {darkBlue, lightBlue, darkYellow,lighterBlue} = colors;
 
 const CalendarScreen = ({navigation}) => {
   const [curDate, setCurDate] = useState(moment().format('YYYY-MM-DD'))

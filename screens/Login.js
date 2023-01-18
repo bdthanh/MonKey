@@ -1,14 +1,12 @@
 import React, {useState, useEffect} from 'react'
 import MainContainer from '../components/Containers/Main';
 import KeyboardAvoidingContainer from '../components/Containers/KeyboardAvoiding';
-import { Text, View, ActivityIndicator, Alert } from 'react-native';
+import { Text, View } from 'react-native';
 import styles from '../components/styles';
 import TextInputWithIcon from '../components/Containers/TextInputWithIcon';
 import LogInButton from '../components/Containers/LogInButton';
 import PressableText from '../components/Containers/PressableText';
 import { autoNav, handleLogIn } from '../utils/authentication';
-import SignUp from './Signup';
-import { StatusBar } from 'expo-status-bar';
 
 const Login = ({navigation}) => {
   useEffect(() => autoNav(navigation), []);

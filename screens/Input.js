@@ -1,5 +1,5 @@
-import React, {useState, useEffect} from 'react';
-import { View, Text, TouchableOpacity, Platform, TextInput, ScrollView, Pressable, Keyboard, StyleSheet, FlatList, Alert, Modal, TouchableWithoutFeedback} from 'react-native';
+import React, {useState} from 'react';
+import { View, Text, TouchableOpacity, Platform, TextInput, Pressable, Keyboard, StyleSheet, FlatList, Alert, Modal } from 'react-native';
 import styles from '../components/styles';
 import { colors } from '../components/colors';
 import { Snackbar } from 'react-native-paper';
@@ -9,14 +9,14 @@ import { Entypo, Foundation, MaterialCommunityIcons } from '@expo/vector-icons'
 import moment from 'moment';
 import { handleExpenseSubmit, handleIncomeSubmit } from '../utils/db';
 import { StatusBarHeight } from '../components/constants';
-import { collection, query, where, onSnapshot, getDocs } from "firebase/firestore";
+import { collection, query, getDocs } from "firebase/firestore";
 import { db } from "../utils/db";
 import { getUserID } from '../utils/authentication';
 import CurrencyInput from 'react-native-currency-input';
 import { StatusBar } from 'expo-status-bar';
 import { useFocusEffect } from '@react-navigation/native';
 
-const { lightYellow, beige, lightBlue, darkBlue, darkYellow, lighterBlue } = colors
+const { lightBlue, darkBlue, darkYellow, lighterBlue } = colors
 
 
 const Input = ({navigation}) => {

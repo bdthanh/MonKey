@@ -1,15 +1,15 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState} from 'react'
 import { Text, View, Alert, StyleSheet, TouchableOpacity, TextInput, Pressable, Keyboard } from 'react-native';
-import { Feather, Foundation, MaterialCommunityIcons } from '@expo/vector-icons';
+import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { getUserID } from '../utils/authentication';
-import { doc, onSnapshot, setDoc, updateDoc, getDoc } from 'firebase/firestore';
+import { doc, updateDoc, getDoc } from 'firebase/firestore';
 import { db } from '../utils/db';
 import { StatusBarHeight } from '../components/constants';
 import { colors } from '../components/colors';
 import { ShadowBox } from 'react-native-neomorph-shadows';
 import { useFocusEffect } from '@react-navigation/native';
 import { StatusBar } from 'expo-status-bar';
-const { lightYellow, lighterBlue, lightBlue, darkBlue, darkYellow } = colors
+const { darkBlue, darkYellow } = colors
 
 
 const EditUsernameScreen = ({navigation}) => {

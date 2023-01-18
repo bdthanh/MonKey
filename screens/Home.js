@@ -1,9 +1,9 @@
-import React, {useState, useMemo, useEffect} from 'react';
+import React, {useState, useEffect} from 'react';
 import { View, Text, TouchableOpacity, Alert, Animated, StyleSheet, } from 'react-native';
 import { colors } from '../components/colors';
 import moment from 'moment';
 import { ScreenHeight } from '../components/constants';
-import { collection, query, where, orderBy, onSnapshot, deleteDoc, doc, getDoc, setDoc, getDocs } from 'firebase/firestore';
+import { collection, query, where, onSnapshot, deleteDoc, doc, getDoc } from 'firebase/firestore';
 import { db } from '../utils/db';
 import { getUserID } from '../utils/authentication';
 import ActivityRings from "react-native-activity-rings";  
